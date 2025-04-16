@@ -51,10 +51,7 @@ This project presents a two-stage deep learning-based approach to identify **ris
 
 ```
 .
-├── droneImages
-├── illustrations
 ├── model
-│   └── __pycache__
 ├── output
 │   ├── missed_buildings
 │   ├── One-Stage
@@ -104,7 +101,6 @@ This project presents a two-stage deep learning-based approach to identify **ris
 │   │       └── labels
 │   └── Orthophoto
 └── utils
-    └── __pycache__
 
 55 directories
 ```
