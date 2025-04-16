@@ -8,6 +8,7 @@ output/YOLO-v8m/orthophoto*
 # Ignore resources directory
 resources/Building/masks/200_masks_seggpt
 resources/Orthophoto/Komlapur_Orthophoto.tif
+resources/Orthophoto/Komlapur_Orthophoto.jpg
 
 # Ignore drone images
 droneImages/
