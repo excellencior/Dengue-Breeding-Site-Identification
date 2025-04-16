@@ -4,20 +4,13 @@ This project presents a two-stage deep learning-based approach to identify **ris
 
 ---
 
-## 🚀 Stage 1: Building Detection
+## 🚀 Stage 1: Dengue Breeding Factor Detection and Building Segmentation
 
-- **Objective:** Identify individual buildings from orthophoto images.
+- **Objective:** Detect dengue breeding factors and segment nearby buildings from orthophoto images.
 - **Method:**
-  - Used a custom object detection model (e.g., YOLO) on sliced orthophotos.
-  - Handled overlapping slices and multiple bounding boxes per building.
-  - Bounding box format: oriented (8-point with confidence score).
-- **Output:** Coordinates of each detected building.
-
----
-
-## 🧪 Stage 2: Dengue Breeding Factor Detection
-
-- **Objective:** Detect objects related to dengue breeding inside/around buildings.
+  - Used object detection models to locate breeding factors such as flower pots, open tanks, tyres, etc.
+  - Simultaneously performed building segmentation using models like SegGPT or YOLO variants.
+  - Generated bounding boxes or polygon masks for buildings and breeding factors.
 - **Detected Factors:**
   - Flower pots
   - Open tanks
@@ -25,9 +18,18 @@ This project presents a two-stage deep learning-based approach to identify **ris
   - Polythene/plastic containers
   - Construction sites
   - Water reservoirs
+- **Output:** Localized breeding factors and segmented building structures with spatial coordinates.
+
+---
+
+## 🧪 Stage 2: Distance-Based Building Classification and Risk Analysis
+
+- **Objective:** Classify buildings as risky or non-risky based on proximity to detected breeding factors.
 - **Method:**
-  - Applied object detection models within each building's bounding box.
-  - Classified buildings as **risky** if any breeding factor is found within.
+  - Calculated spatial distance between each segmented building and detected breeding factors.
+  - Applied rules or threshold distances to determine building risk status.
+  - Used confidence scores from models to weigh reliability of predictions.
+- **Output:** Risk-labeled buildings for targeted intervention.
 
 ---
 
