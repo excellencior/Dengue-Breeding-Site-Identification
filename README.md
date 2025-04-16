@@ -4,7 +4,7 @@ This project presents a two-stage deep learning-based approach to identify **ris
 
 ---
 
-## 🚀 Stage 1: Dengue Breeding Factor Detection and Building Segmentation
+## 🚀 Stage 1: Object Detection and Building Segmentation
 
 - **Objective:** Detect dengue breeding factors and segment nearby buildings from orthophoto images.
 - **Method:**
@@ -22,7 +22,7 @@ This project presents a two-stage deep learning-based approach to identify **ris
 
 ---
 
-## 🧪 Stage 2: Distance-Based Building Classification and Risk Analysis
+## 🧪 Stage 2: Building Classification for Scalable Inspections
 
 - **Objective:** Classify buildings as risky or non-risky based on proximity to detected breeding factors.
 - **Method:**
