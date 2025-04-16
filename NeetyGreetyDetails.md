@@ -16,8 +16,8 @@ This document outlines the end-to-end process for running the dengue breeding si
 
 - **Training:** Done using Mirpur Technical slices (For both OD and BS) : Refer to Roboflow (For both OD and BS)
 - **Inference Target:** Kamalapur (OD (326 x512 tiles), BD (with two slicing variants))
-  - **Overlapped slices** (50% in all directions).
-  - **Non-overlapped slices**.
+   - **Non-overlapped slices (52)**.
+   - **Overlapped slices (200)** (50% in all directions).
 
 - From Kamalapur orthophoto:
   - `52 slices`: Used for **testing segmentation accuracy**.
