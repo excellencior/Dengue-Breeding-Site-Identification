@@ -1,0 +1,22 @@
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
+# Ignore output directory
+output/YOLO-v8m/orthophoto*
+
+# Ignore resources directory
+resources/Building/masks/200_masks_seggpt
+resources/Orthophoto/Komlapur_Orthophoto.tif
+
+# Ignore drone images
+droneImages/
+
+# Ignore illustrations
+illustrations/
+
+# Ignore model cache files
+model/__pycache__/
+
+# Ignore utils cache files
+utils/__pycache__/

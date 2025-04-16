@@ -1,0 +1,1 @@
+matlab -nodisplay -nosplash -r "model/stage2_view.m; exit"
