@@ -27,7 +27,7 @@ This document outlines the end-to-end process for running the dengue breeding si
 - **Output:** Image slices prepared for training and inference  
 - **Notebook References:**
   - **Dataset Slicing + Preparation:**  
-    Kaggle Notebook: `denguebsi` (Object Detection + Building Segmentation slicing)
+    Kaggle Group: `denguebsi` (Object Detection + Building Segmentation slicing)
 ---
 
 ## 🧠 Step 2: Model Training & Inference
