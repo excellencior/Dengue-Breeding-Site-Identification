@@ -25,7 +25,9 @@ This document outlines the end-to-end process for running the dengue breeding si
 - **Locations:** Mirpur Technical and Kamalapur  
 - **Tool:** Kaggle notebooks (soon to be ported to Google Colab)  
 - **Output:** Image slices prepared for training and inference  
-
+- **Notebook References:**
+  - **Dataset Slicing + Preparation:**  
+    Kaggle Notebook: `denguebsi` (Object Detection + Building Segmentation slicing)
 ---
 
 ## 🧠 Step 2: Model Training & Inference
@@ -38,6 +40,13 @@ This document outlines the end-to-end process for running the dengue breeding si
     - Overlapped (50%) vs Non-overlapped variants  
   - Inference on 326x512 tiles (OD) and full orthophoto (BD)
 
+- **Notebook References:**
+  - **YOLOv9-GELAN-C (Object Detection):**  
+    [YOLO_OBJECT_DETECTION Colab](https://colab.research.google.com/drive/1IN_Ejbd9m13jd5o2u4fgu6sk4hM28CLr?usp=sharing)
+
+  - **YOLO Variants (Instance Segmentation - BS):**  
+    [YOLO_INSTANCE_SEGMENTATION Colab](https://colab.research.google.com/drive/18xOC6Wvi0VgLvvKuHNfvNJxXA3PEf3V5?usp=sharing)
+
 ---
 
 ## 🧪 Step 3: Model Evaluation
@@ -45,6 +54,7 @@ This document outlines the end-to-end process for running the dengue breeding si
 ### ➤ SegGPT
 - **Type:** In-context learning  
 - **Output:** Highlighted pixel regions representing segmented buildings  
+- **Script Used:** `bbox_per_image.py`
 
 ### ➤ YOLO Variants
 - **Type:** Instance segmentation via Ultralytics  
@@ -52,18 +62,4 @@ This document outlines the end-to-end process for running the dengue breeding si
 - **Use:** Outputs processed for post-inference sliding window technique  
 - **Tools:** `lib` object from Ultralytics used for polygon extraction and mask generation  
 
----
-
-## 🔗 Notebook References
-
-- **Dataset Slicing + Preparation:**  
-  Kaggle Notebook: `denguebsi` (Object Detection + Building Segmentation slicing)
-
-- **Segmentation Evaluation Script:**  
-  `bbox_per_image.py` for SegGPT results
-
-- **YOLOv9-GELAN-C (Object Detection):**  
-  [YOLO_OBJECT_DETECTION Colab](https://colab.research.google.com/drive/1IN_Ejbd9m13jd5o2u4fgu6sk4hM28CLr?usp=sharing)
-
-- **YOLO Variants (Instance Segmentation - BS):**  
-  [YOLO_INSTANCE_SEGMENTATION Colab](https://colab.research.google.com/drive/18xOC6Wvi0VgLvvKuHNfvNJxXA3PEf3V5?usp=sharing)
+> 🔍 **Note:** Segmentation model evaluation is computed using the `seg_accuracy.m` (along with some additional scripts) MATLAB script.
