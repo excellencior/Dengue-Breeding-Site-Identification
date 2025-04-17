@@ -6,10 +6,10 @@ This document outlines the end-to-end process for running the dengue breeding si
 
 ## 📂 Dataset (Annotated)
 
-- **Object Detection:**  
+- **Object Detection (OD):**  
   [![Download Dataset](https://app.roboflow.com/images/download-dataset-badge.svg)](https://universe.roboflow.com/thesis19/mv_dataset)
 
-- **Building Segmentation:**
+- **Building Segmentation (BS):**
   - **Mirpur Technical (Train-set):**  
     [![Download Dataset](https://app.roboflow.com/images/download-dataset-badge.svg)](https://universe.roboflow.com/thesis19/mt-seg-ann-1024_compressed_cv2-lyqkb)
   - **Kamalapur (Test-set):**
@@ -38,13 +38,13 @@ This document outlines the end-to-end process for running the dengue breeding si
   - `52 slices` – Testing segmentation accuracy  
   - `200 slices` – Sliding window-based OBB generation  
     - Overlapped (50%) vs Non-overlapped variants  
-  - Inference on 326x512 tiles (OD) and full orthophoto (BD)
+  - Inference on 326, 512x512 tiles (OD with Augmentation, ref. to Roboflow Dataset (v3)) and 60, 1024x1024 tiles (BS with Augmentation, ref. to Roboflow Dataset (v22))
 
 - **Notebook References:**
   - **YOLOv9-GELAN-C (Object Detection):**  
     [YOLO_OBJECT_DETECTION Colab](https://colab.research.google.com/drive/1IN_Ejbd9m13jd5o2u4fgu6sk4hM28CLr?usp=sharing)
 
-  - **YOLO Variants (Instance Segmentation - BS):**  
+  - **YOLO Variants (Instance Segmentation):**  
     [YOLO_INSTANCE_SEGMENTATION Colab](https://colab.research.google.com/drive/18xOC6Wvi0VgLvvKuHNfvNJxXA3PEf3V5?usp=sharing)
 
 ---
