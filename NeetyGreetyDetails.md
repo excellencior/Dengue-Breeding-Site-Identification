@@ -61,5 +61,4 @@ This document outlines the end-to-end process for running the dengue breeding si
 - **Output:** Bounding box + segmented polygon + confidence score  
 - **Use:** Outputs processed for post-inference sliding window technique  
 - **Tools:** `lib` object from Ultralytics used for polygon extraction and mask generation  
-
-> 🔍 **Note:** Segmentation model evaluation is computed using the `seg_accuracy.m` (along with some additional scripts) MATLAB script.
+- **Script Used:** Segmentation model evaluation is computed using the `seg_accuracy.m` (along with some additional scripts) MATLAB script.
