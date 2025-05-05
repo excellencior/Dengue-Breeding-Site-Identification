@@ -1,0 +1,8 @@
+Difference between
+Ground Truth and Ground-Truth-Buildings
+
+Ground Truth
+GT Buildings + GT Objects
+
+Ground-Truth-Buildings
+GT Buildings + PRED Objects

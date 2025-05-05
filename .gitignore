@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+
+output/YOLO-v8m/orthophoto*
+
+resources/Building/masks/200_masks_seggpt
+resources/Orthophoto/Komlapur_Orthophoto.tif
+resources/Orthophoto/Komlapur_Orthophoto.jpg
+
+model/__pycache__/
+
+utils/__pycache__/

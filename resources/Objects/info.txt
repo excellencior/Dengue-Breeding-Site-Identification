@@ -1,0 +1,3 @@
+Files contain direct data from YOLO-v9 inference.
+
+This data is then further processed and converted into global pixel coordinates for the object detection.

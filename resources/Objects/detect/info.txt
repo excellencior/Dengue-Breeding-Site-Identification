@@ -1,0 +1,18 @@
+exp
+DIoU
+best.pt (v3 Mashiat APU)
+
+exp2 **
+CIoU Aug v3
+
+exp3
+DIoU Aug v4
+
+confidence threshold during training = 2%
+
+label-format
+class_id x_center y_center width height
+
+The coordinates are normalized from zero to one
+Note: To convert to normalized xywh from pixel values, divide x (and width) by the image's width and divide y (and height) by the image's height.
+

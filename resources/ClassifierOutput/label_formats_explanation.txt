@@ -1,0 +1,19 @@
+
+YOLOv9 Label Format (Full Orthophoto Resolution)
+------------------------------------------------
+Classes: [construction_site, flower_pot, open_tank, polythene, reservoir, tyres] == [0, 1,, 2, 3, 4, 5, 6]
+Format: class_id center_x center_y width height
+Details:
+  - class_id: Integer representing the class of the object.
+  - center_x, center_y: Coordinates of the bounding box center, based on the full orthophoto resolution.
+  - width, height: Dimensions of the bounding box, also based on the full orthophoto resolution.
+
+Building Label Format (Full Orthophoto Resolution)
+---------------------------------------------------
+Files: labels.txt (Consists of only buildings), labels_binclass.txt (Consists of binary classified buildings)
+Classes: 1 (Risky Building), 0 (Safe Building)
+Format: class_id top_left top_right bottom_right bottom_left
+Details:
+  - class_id: Integer where 1 = Risky Building and 0 = Safe Building.
+  - top_left, top_right, bottom_right, bottom_left: Each corner coordinate pair represents a specific corner of the building,
+    based on the full orthophoto resolution, allowing for orientation and tilt.
