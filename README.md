@@ -1,49 +1,93 @@
-Thought for a second
-
-
-```markdown
 # Detection of Dengue Breeding Sites in Large‑scale Landscapes Plagued by Unplanned Urban Development from Aerial Imagery and Remote Sensing with Deep Learning
+---
 
-Early detection of dengue breeding sites is crucial for controlling outbreaks in dense urban regions where manual inspections aren’t scalable or cost‑effective. This repository implements a novel two‑stage deep learning pipeline on aerial imagery and remote sensing data to (1) segment individual buildings, (2) detect potential dengue breeding objects, and (3) spatially combine the two for geo‑targeted inspection. In orthophotos from two dengue‑prone districts in Dhaka, our two‑stage method achieved an 83.6 % balanced accuracy with a 35 % reduction in manual inspection cost, outperforming a one‑stage baseline (69.5 % balanced accuracy).
+Early detection of dengue breeding sites is crucial for controlling outbreaks in dense urban regions where manual inspections aren't scalable or cost‑effective. This repository implements a novel two‑stage deep learning pipeline on aerial imagery and remote sensing data to (1) segment individual buildings, (2) detect potential dengue breeding objects, and (3) spatially combine the two for geo‑targeted inspection. In orthophotos from two dengue‑prone districts in Dhaka, our two‑stage method achieved an 83.6 % balanced accuracy with a 35 % reduction in manual inspection cost, outperforming a one‑stage baseline (69.5 % balanced accuracy).
+
+<p align="center">
+  <img src="Illustrations [showcase]/Simple_Methodology_Diagram.jpg" alt="Methodology Diagram" width="600"/>
+</p>
 
 ---
 
 ## 📂 Repository Structure
 
 ```
-
-├── data/
-│   ├── train/
-│   │   ├── YOLO/                  # Training images & labels for object detection
-│   │   ├── YOLO\_noAugmentation/   # Non‑augmented OD training set
-│   │   └── seggpt/                # Training set for building segmentation
-│   └── test/
-│       ├── tiles\_JPG\_25p.zip      # 25 % overlap orthophoto tiles
-│       ├── tiles\_JPG\_50p.zip      # 50 % overlap orthophoto tiles
-│       └── tiles\_JPG\_75p.zip      # 75 % overlap orthophoto tiles
-├── notebooks/
-│   ├── orthophoto\_tiles\_division\_(kaggle).ipynb   # Slice raw orthophotos into tiles
-│   ├── train\_building\_segmentation.ipynb          # Segmentation model training
-│   ├── train\_breeding\_site\_detection.ipynb        # OD model training
-│   ├── inference\_and\_evaluation.ipynb             # Run inference & compute metrics
-│   └── combine\_and\_visualize\_results.ipynb        # Distance‑based classification & viz
-├── src/
-│   ├── data\_utils.py           # loading, slicing, augmentation
-│   ├── models/                 # model definitions
-│   ├── train.py                # CLI entrypoint for training
-│   └── infer.py                # CLI entrypoint for inference
-├── results/
-│   ├── figures/                # ROC curves, confusion matrices, maps
-│   └── tables/                 # Balanced accuracy and cost reduction metrics
-├── models/
-│   ├── best\_v8m.pt             # YOLO‑v8‑medium weights (breeding site detector)
-│   └── best\_v11m.pt            # YOLO‑v11‑medium weights
-├── output/                     # final geolocation targets & visualization overlays
-├── Dockerfile                  # (optional) container setup
-├── requirements.txt            # Python (≥3.8) dependencies
-└── README.md
-
-````
+.
+├── data [train, test]
+│   ├── seggpt
+│   │   ├── gt_masks
+│   │   ├── inference
+│   │   └── seggpt
+│   ├── yolov11m
+│   │   └── inference
+│   └── yolov8m
+│       └── inference
+├── Illustrations [showcase]
+├── model
+│   └── __pycache__
+├── notebooks
+├── output
+│   └── YOLO-v8m
+├── resources
+│   ├── Building
+│   │   ├── bbox_perslice
+│   │   │   ├── SegGPT
+│   │   │   ├── YOLO-v11m
+│   │   │   ├── YOLO-v11m-25p
+│   │   │   ├── YOLO-v11m-75p
+│   │   │   ├── YOLO-v8m
+│   │   │   ├── YOLO-v8m-25p
+│   │   │   └── YOLO-v8m-75p
+│   │   ├── masks
+│   │   │   ├── 52_images_seggpt
+│   │   │   ├── 52_masks_v11m
+│   │   │   ├── 52_masks_v8m
+│   │   │   ├── labels_11m
+│   │   │   ├── labels_11m_25
+│   │   │   ├── labels_11m_75
+│   │   │   ├── labels_8m
+│   │   │   ├── labels_8m_25
+│   │   │   └── labels_8m_75
+│   │   └── test
+│   ├── ClassifierOutput
+│   │   ├── Building Classification
+│   │   │   ├── Ground Truth
+│   │   │   ├── Ground-Truth-Buildings
+│   │   │   ├── SegGPT
+│   │   │   ├── YOLO-v11m
+│   │   │   ├── YOLO-v11m-25p
+│   │   │   ├── YOLO-v11m-75p
+│   │   │   ├── YOLO-v11m-nms
+│   │   │   ├── YOLO-v11m ONE-STAGE
+│   │   │   ├── YOLO-v8m
+│   │   │   ├── YOLO-v8m-25p
+│   │   │   ├── YOLO-v8m-75p
+│   │   │   └── YOLO-v8m-nms
+│   │   └── Object Detection
+│   │       ├── Ground Truth
+│   │       └── YOLO-v9c
+│   ├── Objects
+│   │   ├── detect
+│   │   │   ├── exp
+│   │   │   │   ├── images
+│   │   │   │   └── labels
+│   │   │   ├── exp2
+│   │   │   │   ├── images
+│   │   │   │   └── labels
+│   │   │   └── exp3
+│   │   │       ├── images
+│   │   │       └── labels
+│   │   ├── detect_yolov11m
+│   │   └── gt_yolov9
+│   │       ├── images
+│   │       └── labels
+│   └── Orthophoto
+├── utils
+│   └── __pycache__
+└── weights
+    ├── yolov11m
+    └── yolov8m
+```
 
 ---
 
@@ -54,7 +98,7 @@ Early detection of dengue breeding sites is crucial for controlling outbreaks in
 - [tiles_JPG_50p.zip](https://huggingface.co/datasets/abturjo/dengue_test_data/resolve/main/tiles_JPG_50p.zip)  
 - [tiles_JPG_75p.zip](https://huggingface.co/datasets/abturjo/dengue_test_data/resolve/main/tiles_JPG_75p.zip)  
 
-> _“p” indicates percent overlap between adjacent tiles._
+> _"p" indicates percent overlap between adjacent tiles._
 
 ### Training Sets  
 - YOLO‑formatted OD data:  
@@ -89,7 +133,7 @@ Contains drone imagery, 3D meshes, point clouds, and orthophotos:
 - **Notebook Environments:** Google Colab, Kaggle Notebooks  
 - **Annotation & Hosting:** Roboflow, Labelbox, Hugging Face Datasets & Model Hub  
 - **Storage & Collaboration:** Google Drive  
-- **Frameworks & Libraries:** PyTorch, YOLOv8/YOLOv11, segGPT, GDAL, Rasterio, scikit‑learn, geopandas
+- **Frameworks & Libraries:** PyTorch, YOLOv8/YOLOv11, segGPT, GDAL, Rasterio, scikit‑learn, geopandas, MATLAB
 
 ---
 
@@ -99,7 +143,7 @@ Contains drone imagery, 3D meshes, point clouds, and orthophotos:
    ```bash
    git clone https://github.com/yourusername/dengue-breeding-site-detection.git
    cd dengue-breeding-site-detection
-````
+   ```
 
 2. **Create a Python environment**
 
@@ -117,58 +161,42 @@ Contains drone imagery, 3D meshes, point clouds, and orthophotos:
 
 4. **Download data & weights**
 
-   * Unzip test sets into `data/test/`.
-   * Download and place training folders under `data/train/`.
-   * Place `best_v8m.pt` and `best_v11m.pt` into `models/`.
+   * Use Notebooks for SegGPT and YOLO (Both detection and segmentation)
+   * Availability of test-set can be found in those notebooks
 
 ---
 
 ## ▶️ Running the Pipelines
 
-1. **Slice orthophotos into tiles**
-
-   ```bash
-   # In Kaggle or Colab, open:
-   notebooks/orthophoto_tiles_division_(kaggle).ipynb
-   ```
-
-2. **Train models**
-
-   ```bash
-   # Segmentation model
-   python src/train.py --config configs/segmentation.yaml  
-   # Breeding‑site detection (YOLO)
-   python src/train.py --config configs/od.yaml  
-   ```
-
-3. **Inference & evaluation**
-
-   ```bash
-   python src/infer.py --weights models/best_v8m.pt --data data/test/tiles_JPG_50p/ --output results/
-   ```
-
-4. **Distance‑based classification & visualization**
-
-   ```bash
-   # Run notebook:
-   notebooks/combine_and_visualize_results.ipynb
-   ```
+**Using model.ipynb to run the project**
+   
+This notebook contains the complete workflow including:
+   
+1. Segmentations to oriented bounding boxes (bbox per slice)
+2. Applying sliding windows from the obtained bounding boxes
+3. Execution of greedy_nms for comparison with our modified NMM
+4. Running the MATLAB script (seg_accuracy.m) for stage-2 distance-based classification
+5. Saving classifications using save_classifications.m and storing data in bbox label format (txt files)
+6. Generating a final visualization showing risky buildings highlighted in red on the original orthophoto
 
 ---
 
 ## 📊 Results & Interpretation
 
 * **Balanced Accuracy & Cost Reduction**
-  See `results/tables/metrics.csv` for comparative metrics:
 
-  * Two‑stage: **83.6 %** balanced accuracy, **35 %** cost reduction
-  * One‑stage: **69.5 %** balanced accuracy
+  * Two‑stage: **83.6 %** balanced accuracy, **35 %** cost reduction
+  * One‑stage: **69.5 %** balanced accuracy
 
-* **Figures**
-
-  * ROC curves: `results/figures/roc_two_stage_vs_one_stage.png`
-  * Geo‑visualizations: `output/inspection_targets_map.png`
-
+- **Figures**
+  * Balanced accuracy (illustrative):  
+    <p align="center">
+      <img src="Illustrations [showcase]/Simple_Balanced_Accuracy.jpg" alt="Balanced Accuracy Illustration" width="500"/>
+    </p>
+  * Geo‑visualizations:
+    <p align="center">
+      <img src="Illustrations [showcase]/orthophoto_r83" alt="Geo Visualization" width="500"/>
+    </p>
 ---
 
 ## 📜 License & Citation
@@ -176,21 +204,19 @@ Contains drone imagery, 3D meshes, point clouds, and orthophotos:
 This project is released under the **MIT License**.
 If you use this work, please cite:
 
-> Abdur R. Turjo, “Detection of Dengue Breeding Sites in Large‑scale Landscapes…,” *\[Journal/Conference]*, 2025. DOI:10.xxxx/xxxxx
+> Apurbo R. Turjo, Sushmita Paul `Detection of Dengue Breeding Sites in Large-scale Landscapes Plagued by
+Unplanned Urban Development from Aerial Imagery and Remote Sensing with
+Deep Learning`
 
 ---
 
 ## ✉️ Contact & Acknowledgments
 
-**Author:** Apurbo B. Turjo
-**Email:** [turjob44@gmail.com](mailto:turjob44@gmail.com)
-**Advisor:** Prof. Dr. Anindya Iqbal (Bangladesh University of Engineering and Technology)
+**Author:** Apurbo B. Turjo  
+**Email:** [turjob44@gmail.com](mailto:turjob44@gmail.com)  
+**Advisor:** Prof. Dr. Anindya Iqbal (Bangladesh University of Engineering and Technology)  
 **In collaboration with:** Prof. Dr. Manzur Murshed (Deakin University, Australia), Prof. Dr. Sohel Rahman (Bangladesh University of Engineering and Technology), Mashiat Mustaq (Purdue University)
 
 ---
 
 *Thank you for reviewing this work! For any questions, feel free to open an issue or contact me directly.*
-
-```
-```
-

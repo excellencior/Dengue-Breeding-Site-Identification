@@ -1,0 +1,40 @@
+anaconda-anon-usage @ file:///croot/anaconda-anon-usage_1710965072196/work
+archspec @ file:///croot/archspec_1709217642129/work
+boltons @ file:///work/perseverance-python-buildout/croot/boltons_1698851177130/work
+Brotli @ file:///croot/brotli-split_1714483155106/work
+certifi @ file:///croot/certifi_1725551672989/work/certifi
+cffi @ file:///croot/cffi_1726856441404/work
+charset-normalizer @ file:///croot/charset-normalizer_1721748349566/work
+conda @ file:///croot/conda_1732198180642/work
+conda-content-trust @ file:///croot/conda-content-trust_1714483159009/work
+conda-libmamba-solver @ file:///croot/conda-libmamba-solver_1706733287605/work/src
+conda-package-handling @ file:///croot/conda-package-handling_1731369017509/work
+conda_package_streaming @ file:///croot/conda-package-streaming_1731366181659/work
+cryptography @ file:///croot/cryptography_1732129644106/work
+distro @ file:///croot/distro_1714488253808/work
+frozendict @ file:///croot/frozendict_1713194832637/work
+idna @ file:///croot/idna_1714398848350/work
+jsonpatch @ file:///croot/jsonpatch_1714483231291/work
+jsonpointer==2.1
+libmambapy @ file:///croot/mamba-split_1725563367192/work/libmambapy
+menuinst @ file:///croot/menuinst_1718132535249/work
+mkl-service==2.4.0
+mkl_fft @ file:///io/mkl313/mkl_fft_1730824109137/work
+mkl_random @ file:///io/mkl313/mkl_random_1730823916628/work
+numpy @ file:///croot/numpy_and_numpy_base_1708638617955/work/dist/numpy-1.26.4-cp312-cp312-linux_x86_64.whl#sha256=1d700f51d8b4fa684d858c9e3b56b1656bc5c82b6b79ff08d4e3b491c430059f
+packaging @ file:///croot/packaging_1720101850331/work
+platformdirs @ file:///work/perseverance-python-buildout/croot/platformdirs_1701732573265/work
+pluggy @ file:///work/perseverance-python-buildout/croot/pluggy_1698805497733/work
+pycosat @ file:///croot/pycosat_1714510623388/work
+pycparser @ file:///tmp/build/80754af9/pycparser_1636541352034/work
+PySocks @ file:///work/perseverance-python-buildout/croot/pysocks_1698845478203/work
+requests @ file:///croot/requests_1730999120400/work
+ruamel.yaml @ file:///croot/ruamel.yaml_1727980156079/work
+ruamel.yaml.clib @ file:///croot/ruamel.yaml.clib_1727769819935/work
+setuptools==69.5.1
+shapely @ file:///croot/shapely_1722533160971/work
+tqdm @ file:///croot/tqdm_1724853939799/work
+truststore @ file:///work/perseverance-python-buildout/croot/truststore_1701735771625/work
+urllib3 @ file:///croot/urllib3_1727769808118/work
+wheel==0.43.0
+zstandard @ file:///croot/zstandard_1731356346222/work
