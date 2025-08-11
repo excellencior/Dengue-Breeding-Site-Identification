@@ -193,7 +193,7 @@ This notebook contains the complete workflow including:
     </p>
   * Geo‑visualizations:
     <p align="center">
-      <img src="Illustrations%20%5Bshowcase%5D/orthophoto_r83.jpg" alt="Geo Visualization" width="500"/>
+      <img src="Illustrations%20%5Bshowcase%5D/orthophoto_r83_preview.png" alt="Geo Visualization" width="500"/>
     </p>
 
 ---
