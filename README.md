@@ -176,6 +176,11 @@ This notebook contains the complete workflow including:
 4. Running the MATLAB script (seg_accuracy.m) for stage-2 distance-based classification
 5. Saving classifications using save_classifications.m and storing data in bbox label format (txt files)
 6. Generating a final visualization showing risky buildings highlighted in red on the original orthophoto
+   
+
+For a streamlined end-to-end execution of the full dengue breeding site detection pipeline, **find** the [`run.ipynb`](https://regal-shadow-86c.notion.site/Running-Thesis-Pipeline-24c002698fb280c0a5a1dbe70501640a?source=copy_link) **notebook**.
+
+This notebook guides you through loading data, running with model inference data, spatially combining results, and generating final visualizations.
 
 ---
 
