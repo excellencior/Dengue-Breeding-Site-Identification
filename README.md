@@ -4,7 +4,7 @@
 Early detection of dengue breeding sites is crucial for controlling outbreaks in dense urban regions where manual inspections aren't scalable or cost‑effective. This repository implements a novel two‑stage deep learning pipeline on aerial imagery and remote sensing data to (1) segment individual buildings, (2) detect potential dengue breeding objects, and (3) spatially combine the two for geo‑targeted inspection. In orthophotos from two dengue‑prone districts in Dhaka, our two‑stage method achieved an 83.6 % balanced accuracy with a 35 % reduction in manual inspection cost, outperforming a one‑stage baseline (69.5 % balanced accuracy).
 
 <p align="center">
-  <img src="Illustrations [showcase]/Simple_Methodology_Diagram.jpg" alt="Methodology Diagram" width="600"/>
+  <img src="Illustrations [showcase]/Simple_Methodology_Diagram.png" alt="Methodology Diagram" width="600"/>
 </p>
 
 ---
@@ -195,7 +195,7 @@ This notebook contains the complete workflow including:
     </p>
   * Geo‑visualizations:
     <p align="center">
-      <img src="Illustrations [showcase]/orthophoto_r83" alt="Geo Visualization" width="500"/>
+      <img src="Illustrations [showcase]/orthophoto_r83.jpg" alt="Geo Visualization" width="500"/>
     </p>
 ---
 
