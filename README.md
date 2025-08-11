@@ -1,10 +1,14 @@
 # Detection of Dengue Breeding Sites in Large‑scale Landscapes Plagued by Unplanned Urban Development from Aerial Imagery and Remote Sensing with Deep Learning
 ---
 
-Early detection of dengue breeding sites is crucial for controlling outbreaks in dense urban regions where manual inspections aren't scalable or cost‑effective. This repository implements a novel two‑stage deep learning pipeline on aerial imagery and remote sensing data to (1) segment individual buildings, (2) detect potential dengue breeding objects, and (3) spatially combine the two for geo‑targeted inspection. In orthophotos from two dengue‑prone districts in Dhaka, our two‑stage method achieved an 83.6 % balanced accuracy with a 35 % reduction in manual inspection cost, outperforming a one‑stage baseline (69.5 % balanced accuracy).
+Early detection of dengue breeding sites is crucial for controlling outbreaks in dense urban regions where manual inspections aren't scalable or cost‑effective. This repository implements a novel two‑stage deep learning pipeline on aerial imagery and remote sensing data to - \
+(1) segment individual buildings, \
+(2) detect potential dengue breeding objects, and \
+(3) spatially combine the two for geo‑targeted inspection. \
+In orthophotos from two dengue‑prone districts in Dhaka, our two‑stage method achieved an **83.6 % balanced accuracy** with a **35 % reduction** in manual inspection cost, outperforming a one‑stage baseline (69.5 % balanced accuracy).
 
 <p align="center">
-  <img src="Illustrations [showcase]/Simple_Methodology_Diagram.png" alt="Methodology Diagram" width="600"/>
+  <img src="Illustrations%20%5Bshowcase%5D/Simple_Methodology_Diagram.png" alt="Methodology Diagram" width="600"/>
 </p>
 
 ---
@@ -153,13 +157,7 @@ Contains drone imagery, 3D meshes, point clouds, and orthophotos:
    # conda env create -f environment.yml && conda activate dengue-detector
    ```
 
-3. **(Optional) Build Docker image**
-
-   ```bash
-   docker build -t dengue-detector .
-   ```
-
-4. **Download data & weights**
+3. **Download data & weights**
 
    * Use Notebooks for SegGPT and YOLO (Both detection and segmentation)
    * Availability of test-set can be found in those notebooks
@@ -191,12 +189,13 @@ This notebook contains the complete workflow including:
 - **Figures**
   * Balanced accuracy (illustrative):  
     <p align="center">
-      <img src="Illustrations [showcase]/Simple_Balanced_Accuracy.jpg" alt="Balanced Accuracy Illustration" width="500"/>
+      <img src="Illustrations%20%5Bshowcase%5D/Simple_Balanced_Accuracy.jpg" alt="Balanced Accuracy Illustration" width="500"/>
     </p>
   * Geo‑visualizations:
     <p align="center">
-      <img src="Illustrations [showcase]/orthophoto_r83.jpg" alt="Geo Visualization" width="500"/>
+      <img src="Illustrations%20%5Bshowcase%5D/orthophoto_r83.jpg" alt="Geo Visualization" width="500"/>
     </p>
+
 ---
 
 ## 📜 License & Citation
