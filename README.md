@@ -197,12 +197,19 @@ This notebook guides you through loading data, running with model inference data
 
 ## 📜 License & Citation
 
-This project is released under the **MIT License**.
-If you use this work, please cite:
+This project is protected under **All Rights Reserved**.
 
-> Apurbo R. Turjo, Sushmita Paul `Detection of Dengue Breeding Sites in Large-scale Landscapes Plagued by
-Unplanned Urban Development from Aerial Imagery and Remote Sensing with
-Deep Learning`
+Unauthorized copying, modification, distribution, or use of this project,
+in whole or in part, is strictly prohibited without written permission from the authors.
+
+If you use or reference this work, please cite:
+
+> Apurbo B. Turjo*, Sushmita Paul*, Mashiat Mustaq, Anindya Iqbal,  
+> M. Sohel Rahman, Zahid H. Siddiquee, Manzur Murshed  
+> *Detection of Dengue Breeding Sites in Large-scale Landscapes Plagued by  
+> Unplanned Urban Development from Aerial Imagery and Remote Sensing with  
+> Deep Learning*
+
 
 
 ## ✉️ Contact & Acknowledgments
