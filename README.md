@@ -1,5 +1,4 @@
 # Detection of Dengue Breeding Sites in Large‑scale Landscapes Plagued by Unplanned Urban Development from Aerial Imagery and Remote Sensing with Deep Learning
----
 
 Early detection of dengue breeding sites is crucial for controlling outbreaks in dense urban regions where manual inspections aren't scalable or cost‑effective. This repository implements a novel two‑stage deep learning pipeline on aerial imagery and remote sensing data to - \
 (1) segment individual buildings, \
@@ -11,7 +10,6 @@ In orthophotos from two dengue‑prone districts in Dhaka, our two‑stage metho
   <img src="Illustrations%20%5Bshowcase%5D/Simple_Methodology_Diagram.png" alt="Methodology Diagram" width="600"/>
 </p>
 
----
 
 ## 📂 Repository Structure
 
@@ -93,7 +91,6 @@ In orthophotos from two dengue‑prone districts in Dhaka, our two‑stage metho
     └── yolov8m
 ```
 
----
 
 ## 🔗 Data & Pre-trained Weights
 
@@ -130,7 +127,6 @@ In orthophotos from two dengue‑prone districts in Dhaka, our two‑stage metho
 Contains drone imagery, 3D meshes, point clouds, and orthophotos:  
 [Google Drive Folder](https://drive.google.com/drive/folders/1-QoHqvPDSKQjCdzJNVmwiqN8vVoiSlrz?usp=drive_link)
 
----
 
 ## 🛠️ Platforms & Tools Used
 
@@ -139,7 +135,6 @@ Contains drone imagery, 3D meshes, point clouds, and orthophotos:
 - **Storage & Collaboration:** Google Drive  
 - **Frameworks & Libraries:** PyTorch, YOLOv8/YOLOv11, segGPT, GDAL, Rasterio, scikit‑learn, geopandas, MATLAB
 
----
 
 ## ⚙️ Installation & Setup
 
@@ -162,7 +157,6 @@ Contains drone imagery, 3D meshes, point clouds, and orthophotos:
    * Use Notebooks for SegGPT and YOLO (Both detection and segmentation)
    * Availability of test-set can be found in those notebooks
 
----
 
 ## ▶️ Running the Pipelines
 
@@ -182,7 +176,6 @@ This notebook contains the complete workflow including:
 
 This notebook guides you through loading data, running with model inference data, spatially combining results, and generating final visualizations.
 
----
 
 ## 📊 Results & Interpretation
 
@@ -201,7 +194,6 @@ This notebook guides you through loading data, running with model inference data
       <img src="Illustrations%20%5Bshowcase%5D/orthophoto_r83_preview.png" alt="Geo Visualization" width="500"/>
     </p>
 
----
 
 ## 📜 License & Citation
 
@@ -212,7 +204,6 @@ If you use this work, please cite:
 Unplanned Urban Development from Aerial Imagery and Remote Sensing with
 Deep Learning`
 
----
 
 ## ✉️ Contact & Acknowledgments
 
@@ -221,6 +212,5 @@ Deep Learning`
 **Advisor:** Prof. Dr. Anindya Iqbal (Bangladesh University of Engineering and Technology)  
 **In collaboration with:** Prof. Dr. Manzur Murshed (Deakin University, Australia), Prof. Dr. Sohel Rahman (Bangladesh University of Engineering and Technology), Mashiat Mustaq (Purdue University)
 
----
 
 *Thank you for reviewing this work! For any questions, feel free to open an issue or contact me directly.*
